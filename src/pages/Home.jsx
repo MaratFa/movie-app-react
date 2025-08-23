@@ -1,6 +1,9 @@
 import MovieCard from "../components/MovieCard";
+import { useState } from "react";
 
 function Home() {
+  const [searchQuery, setQuery] = useState("");
+
   const movies = [
     { id: 1, title: "John Wick", release_date: "2020" },
     { id: 2, title: "Terminator", release_date: "1999" },
@@ -16,6 +19,7 @@ function Home() {
           type="text"
           placeholder="Search for movies..."
           className="search-input"
+          value={searchQuery}
         />
         <button type="submit" className="search-btn">Search</button>
       </form>
@@ -27,5 +31,6 @@ function Home() {
     </div>
   );
 }
+
 
 export default Home;
