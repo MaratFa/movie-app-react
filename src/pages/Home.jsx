@@ -10,10 +10,10 @@ function Home() {
     { id: 3, title: "The Matrix", release_date: "1998" },
   ];
 
-  const handleSearch = (e) => {    
+  const handleSearch = (e) => {
     e.preventDefault();
     alert(searchQuery);
-    setSearchQuery("-------------")
+    setSearchQuery("-------------");
   };
 
   return (
@@ -30,6 +30,7 @@ function Home() {
           Search
         </button>
       </form>
+
       <div className="movies-grid">
         {movies.map((movie) => (
           <MovieCard movie={movie} key={movie.id} />
