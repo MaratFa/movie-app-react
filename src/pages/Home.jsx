@@ -21,6 +21,8 @@ function Home() {
         setLoading(false);
       }
     };
+
+    loadPopularMovies();
   }, []);
 
   const handleSearch = (e) => {
